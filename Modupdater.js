@@ -21,6 +21,7 @@ fs.mkdirSync("./アップデート後")
 console.log("アップデート後フォルダのリセットが完了しました")
 
 console.log("Modファイルのダウンロード中です")
+let count = 0;
 for(const element of wannaupdatemod) {
     for(const json of jsondata) {
         if (!element.includes(json.name)) {
@@ -30,12 +31,13 @@ for(const element of wannaupdatemod) {
             const owner = json.link.split('/')[0];
             const repo = json.link.split('/')[1];
             downloadFile(owner, repo);
+            count++;
             console.log(`${json.name}のアップデートが完了しました。`)
         }
     }
 }
 
-console.log(`全てのアップデートが完了しました(´・ω・\)。リストにないMODはアップデートされませんでした。`)
+console.log(`全てのMODファイルのアップデートが完了しました。(アップデートできなかったMODは${wannaupdatemod.length - count}個です)`)
 
 async function downloadFile(owner, repo) {
     const url = await getLatestReleaseFiles(owner, repo);
