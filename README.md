@@ -4,7 +4,7 @@ Modupdater for skyblock
 # How to use 
 Simply put the mod files you want to update in the "アップデートしたいMOD" folder and run
 
-アップデートしたいModフォルダにアップデートしたいModを入れて終わりです。
+"アップデートしたいMOD"フォルダにアップデートしたいModを入れて終わりです。
 
 # Important
 ClientID、ClientSecretを使わないなら、42行目を
