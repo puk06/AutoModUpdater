@@ -20,7 +20,7 @@ fs.rmSync("./アップデート後", { recursive: true })
 fs.mkdirSync("./アップデート後")
 console.log("アップデート後フォルダのリセットが完了しました")
 
-console.log("ダウンロード中です")
+console.log("Modファイルのダウンロード中です")
 for(const element of wannaupdatemod) {
     for(const json of jsondata) {
         if (!element.includes(json.name)) {
@@ -30,21 +30,16 @@ for(const element of wannaupdatemod) {
             const owner = json.link.split('/')[0];
             const repo = json.link.split('/')[1];
             downloadFile(owner, repo);
+            console.log(`${json.name}のアップデートが完了しました。`)
         }
     }
 }
 
-if (fs.readdirSync("./アップデート後").length == 0) {
-    console.log("アップデート出来るMODが有りませんでした")
-} else if (!fs.readdirSync("./アップデート後").length == fs.readdirSync("./アップデートしたいMOD").length) {
-    console.log(`アップデートは完了しましたが、アップデート出来なかったMODが有ります(${fs.readdirSync("./アップデートしたいMOD").length - fs.readdirSync("./アップデート後").length}個)`)
-} else {
-    console.log(`全てのアップデートが完了しました(${fs.readdirSync("./アップデート後").length}個)`)
-}
+console.log(`全てのアップデートが完了しました(´・ω・\)。リストにないMODはアップデートされませんでした。`)
 
 async function downloadFile(owner, repo) {
     const url = await getLatestReleaseFiles(owner, repo);
-    const fileurl = `${url.filter(file => file.endsWith('.jar'))[0].toString()} + "?client_id=${githubclientid}&client_secret=${githubclientsecret}"`;
+    const fileurl = `${url.filter(file => file.endsWith('.jar'))[0].toString()}?&client_id=${githubclientid}&client_secret=${githubclientsecret}`;
     const dest = `./アップデート後/${url[0].split('/')[url[0].split('/').length - 1]}`;
     const res = await axios.get(fileurl, {responseType: 'arraybuffer'});
     fs.writeFileSync(dest, res.data, 'UTF-8');
@@ -53,7 +48,7 @@ async function downloadFile(owner, repo) {
 function getLatestReleaseFiles(owner, repo) {
     const options = {
         hostname: 'api.github.com',
-        path: `/repos/${owner}/${repo}/releases/latest?client_id=${githubclientid}&client_secret=${githubclientsecret}`,
+        path: `/repos/${owner}/${repo}/releases/latest?&client_id=${githubclientid}&client_secret=${githubclientsecret}`,
         headers: {
             'User-Agent': 'request',
             Accept: 'application/vnd.github.v3+json'
