@@ -1,1 +1,10 @@
-[{"name": "Skytils","link": "BananaFructa/Apec"}, {"name": "Cowlection","link": "cow-mc/Cowlection"}, {"name": "ctjs","link": "ChatTriggers/ChatTriggers"}, {"name": "dulkir","link": "inglettronald/DulkirMod"}, {"name": "Dungeon_Rooms","link": "Quantizr/DungeonRoomsMod"}, {"name": "codesad","link": "codesad/HidePlayers"}, {"name": "SkyblockAddons","link": "BiscuitDevelopment/SkyblockAddons"}, {"name": "soopyv2forge","link": "Soopyboo32/SoopyV2Forge"}]
+[
+    { "name": "Skytils", "link": "BananaFructa/Apec" },
+    { "name": "Cowlection", "link": "cow-mc/Cowlection" },
+    { "name": "ctjs", "link": "ChatTriggers/ChatTriggers" },
+    { "name": "dulkir", "link": "inglettronald/DulkirMod" },
+    { "name": "Dungeon_Rooms", "link": "Quantizr/DungeonRoomsMod" },
+    { "name": "codesad", "link": "codesad/HidePlayers" },
+    { "name": "SkyblockAddons", "link": "BiscuitDevelopment/SkyblockAddons" },
+    { "name": "soopyv2forge", "link": "Soopyboo32/SoopyV2Forge" }
+]
