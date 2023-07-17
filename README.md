@@ -1,18 +1,17 @@
 # AutoModUpdater
-Modupdater for skyblock
+AutoModupdater for Hypixel Skyblock
 
-# How to use 
-Simply put the mod files you want to update in the "アップデートしたいMOD" folder and run
-
+# 使い方 
 "アップデートしたいMOD"フォルダにアップデートしたいModを入れて終わりです。
 
-# Important
+# 絶対読んでね！？
 ClientID、ClientSecretを使わないなら、42行目を
 ```javascript
 const fileurl = `${url.filter(file => file.endsWith('.jar'))[0].toString()}`;
 ```
+こうしてください。
 
 あと、5, 7, 8行目を消してください
 
-# TO do
+# やること
 頑張ってModリストは更新していきます。
