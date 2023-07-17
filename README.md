@@ -17,3 +17,5 @@ npm i dotenv -g
 
 # やること
 頑張ってModリストは更新していきます。
+Githubリポジトリ検索を使って登録されてないものでもアップデートできるようにする(star順)
+https://qiita.com/oblivion/items/468294aaba4ecfe1219a ynで選択できるようにする
