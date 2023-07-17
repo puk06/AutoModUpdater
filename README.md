@@ -15,19 +15,5 @@ npm i dotenv -g
 ```
 あとは"アップデートしたいMOD"フォルダにアップデートしたいModを入れて終わりです。
 
-# 絶対読んでね！？
-~~ClientID、ClientSecretを使わないなら、Modupdaterの42行目と56行目を
-```javascript
-//46行目
-const fileurl = `${url.filter(file => file.endsWith('.jar'))[0].toString()}`;
-
-//56行目
-path: `/repos/${owner}/${repo}/releases/latest`,
-```
-こうしてください。
-
-あと、5, 7, 8行目を消してください~~
-いらないっぽい
-
 # やること
 頑張ってModリストは更新していきます。
