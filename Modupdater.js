@@ -37,7 +37,10 @@ for(const element of wannaupdatemod) {
     }
 }
 
-console.log(`全てのMODファイルのアップデートが完了しました。(アップデートできなかったMODは${wannaupdatemod.length - count}個です)`)
+console.log(`全てのMODファイルのアップデートが完了しました。(アップデートできなかったMODは${wannaupdatemod.length - count}個です)。\n5秒後に画面を閉じます。`)
+setTimeout(() => {
+    process.exit();
+}, 5000);
 
 async function downloadFile(owner, repo) {
     const url = await getLatestReleaseFiles(owner, repo);
