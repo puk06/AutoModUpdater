@@ -44,6 +44,9 @@ for(const element of wannaupdatemod) {
 
 console.log(`Modファイルのアップデートが完了しました(${count}個)`)
 console.log("---------------------------------------------")
+for (const mod of modlist) {
+    fs.copyFileSync(`./アップデートしたいMOD/${mod}`, `./アップデート後/${mod}`)
+}
 console.log(`アップデートできなかったMOD(${wannaupdatemod.length - count}個)\n${modlist.join("\n")}`)
 console.log("---------------------------------------------")
 console.log(`すべての処理が終了したため、5秒後に画面を閉じます`)
