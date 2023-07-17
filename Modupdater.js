@@ -15,6 +15,11 @@ fs.readdirSync("./アップデートしたいMOD").forEach(file => {
 const rawjsondata = fs.readFileSync('UpdateLinks.json', 'utf-8')
 const jsondata = JSON.parse(rawjsondata);
 
+console.log("アップデート後フォルダのリセット中です")
+fs.rmSync("./アップデート後", { recursive: true })
+fs.mkdirSync("./アップデート後")
+console.log("アップデート後フォルダのリセットが完了しました")
+
 console.log("ダウンロード中です")
 for(const element of wannaupdatemod) {
     for(const json of jsondata) {
@@ -48,7 +53,7 @@ async function downloadFile(owner, repo) {
 function getLatestReleaseFiles(owner, repo) {
     const options = {
         hostname: 'api.github.com',
-        path: `/repos/${owner}/${repo}/releases/latest`,
+        path: `/repos/${owner}/${repo}/releases/latest?client_id=${githubclientid}&client_secret=${githubclientsecret}`,
         headers: {
             'User-Agent': 'request',
             Accept: 'application/vnd.github.v3+json'
