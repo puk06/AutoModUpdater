@@ -10,10 +10,13 @@ npm i axios@0.21.4 -g
 ```
 npm i fs-extra -g
 ```
-"アップデートしたいMOD"フォルダにアップデートしたいModを入れて終わりです。
+```
+npm i dotenv -g
+```
+あとは"アップデートしたいMOD"フォルダにアップデートしたいModを入れて終わりです。
 
 # 絶対読んでね！？
-ClientID、ClientSecretを使わないなら、42行目と56行目を
+ClientID、ClientSecretを使わないなら、Modupdaterの42行目と56行目を
 ```javascript
 //46行目
 const fileurl = `${url.filter(file => file.endsWith('.jar'))[0].toString()}`;
