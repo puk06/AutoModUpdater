@@ -176,7 +176,9 @@ async function main() {
 
 async function maindelay() {
     await main();
-    
+    setTimeout(() => {
+        process.exit();
+    }, 5000);
 }
 
 maindelay()
