@@ -5,13 +5,10 @@ AutoModupdater for Hypixel Skyblock
 Node.js持ってないならだうんろーどしてね。
 ダウンロードが終わったら、コマンドプロンプトを開いて、これを入力してね
 ```
-npm i axios@0.21.4 -g
+cd (Modupdater.jsファイルが有るパス)
 ```
 ```
-npm i fs-extra -g
-```
-```
-npm i dotenv -g
+npm i
 ```
 あとは"アップデートしたいMOD"フォルダにアップデートしたいModを入れて終わりです。
 
